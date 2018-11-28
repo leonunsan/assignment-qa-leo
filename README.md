@@ -22,9 +22,9 @@ The tests of this automation covers Rest Backend and Front-End as information be
 
 ## How To Run
 
-### Needed
+### Setup Needed
 
-  **Java 8**
+  **JAVA 8+ jdk**
   
   **Gradle 4.9+**
   
