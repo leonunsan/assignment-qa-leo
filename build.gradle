@@ -1,0 +1,59 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()   
+}
+
+mainClassName = 'waes'
+
+dependencies {
+	//RestAssured Framework
+	testCompile 'io.rest-assured:xml-path:3.1.0'
+    testCompile 'io.rest-assured:rest-assured:3.1.0'
+    
+    //Junit Framework    
+    testCompile 'junit:junit:4.12'
+    
+    //Junit Jupiter (Junit 5)
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    testCompile 'org.junit.vintage:junit-vintage-engine:5.3.1' 
+    
+    //Needed to use Arguments
+	testCompile 'org.junit.jupiter:junit-jupiter-params:5.3.1'	
+	
+	//Neede to create json body
+	testCompile 'com.googlecode.json-simple:json-simple:1.1'
+	
+	//Selenium Framework
+	testCompile 'org.seleniumhq.selenium:selenium-java:3.14.0'
+	
+	//Report
+	testCompile 'com.aventstack:extentreports:3.1.5'
+	
+	//Chrome Driver
+	testCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+	
+	//FireFox Driver
+	testCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.141.59'
+	
+	//internet Explorer Driver
+	testCompile 'org.seleniumhq.selenium:selenium-ie-driver:3.141.59'	
+	
+	//needed for bypass the Path config drivers
+	testCompile("io.github.bonigarcia:webdrivermanager:3.0.0")
+}
+
+
+// Report of test execution
+test {
+    useJUnitPlatform() 
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'        
+    }
+}
+
+// Needed to tests run always
+test.outputs.upToDateWhen {false}
