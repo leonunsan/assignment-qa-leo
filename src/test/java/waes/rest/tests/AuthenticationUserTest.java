@@ -3,14 +3,23 @@ package waes.rest.tests;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import org.junit.jupiter.params.provider.Arguments;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import waes.commonresource.ExtentManager;
 import waes.rest.resource.DataProvider;
-import waes.ui.resource.ExtentManager;
+
+/**
+ * The AuthenticationUserTest is a class that have all test cases validations for Authentication user Calls.
+ * It will be called for RunAllTests
+ * 
+ * @author Leonardo Santos
+ */
 
 public class AuthenticationUserTest {
 	

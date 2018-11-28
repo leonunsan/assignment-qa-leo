@@ -11,9 +11,15 @@ import com.aventstack.extentreports.Status;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import waes.commonresource.ExtentManager;
 import waes.rest.resource.DataProvider;
-import waes.ui.resource.ExtentManager;
 
+/**
+ * The DeleteUserTest is a class that have all test cases validations for Delete user Calls. 
+ * It will be called for RunAllTests.
+ * 
+ * @author Leonardo Santos
+ */
 
 public class DeleteUserTest {
 	

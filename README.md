@@ -24,7 +24,7 @@ The tests of this automation covers Rest Backend and Front-End as information be
 
 ### Needed
 
-  **Java**
+  **Java 8**
   
   **Gradle 4.9+**
   

@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import com.aventstack.extentreports.ExtentReports;
 
+import waes.commonresource.ExtentManager;
 import waes.rest.resource.DataProvider;
 import waes.rest.tests.AuthenticationUserTest;
 import waes.rest.tests.DeleteUserTest;
@@ -18,15 +19,20 @@ import waes.rest.tests.GetAllUserTest;
 import waes.rest.tests.GetInfoUserTest;
 import waes.rest.tests.SignupUserTest;
 import waes.rest.tests.UpdateUserTest;
-import waes.ui.resource.ExtentManager;
-import waes.ui.test.Tests;
+import waes.ui.test.UiTests;
 
-
+/**
+ * The RunAllTests have all tests cases of this project, it is the responsible for 
+ * have the Junit Annotations also.
+ * Any test cases created should be called from here.
+ * 
+ * @author Leonardo Santos
+ */
 
 public class RunAllTests {
 	private static ExtentReports extent;
 
-	Tests runUiTest = new Tests();
+	UiTests runUiTest = new UiTests();
 	AuthenticationUserTest authUser = new AuthenticationUserTest();
 	DeleteUserTest deleteUser = new DeleteUserTest();
 	GetAllUserTest getAllUser = new GetAllUserTest();

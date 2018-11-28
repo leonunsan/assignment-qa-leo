@@ -1,8 +1,15 @@
-package waes.ui.resource;
+package waes.commonresource;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
+/**
+ * The ExtentManager is a class that manager the report configuration, all the setup of report and his instance is created here
+ * It will be used for all test cases.
+ * 
+ * @author Leonardo Santos
+ */
 
 public class ExtentManager {
 

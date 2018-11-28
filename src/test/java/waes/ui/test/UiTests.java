@@ -5,11 +5,18 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import waes.ui.resource.ExtentManager;
+import waes.commonresource.ExtentManager;
 import waes.ui.resource.GenerateDriver;
 import waes.ui.resource.WaesworksResources;
 
-public class Tests implements WaesworksResources.ENV1{
+/**
+ * The UiTests is a class that have all test cases calls for UI Tests, it's responsible mount the test cases.
+ * It implements the WaesworksResources and the environment for tests (ENV1) to get the data needed for the tests
+ * 
+ * @author Leonardo Santos
+ */
+
+public class UiTests implements WaesworksResources.ENV1{
 	
 	public void validLoginAdmin() {	
 		ExtentReports logger = ExtentManager.getInstance();

@@ -4,6 +4,13 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.params.provider.Arguments;
 
+/**
+ * The DataProvider is responsible for have all data input for rest calls, each "Arguments.of"
+ * represents a specific test call for the endpoint being tested. It will be called on RunAllTests
+ * 
+ * @author Leonardo Santos
+ */
+
 public class DataProvider {
 	static String baseUrl = "http://localhost:8081/waesheroes/api/v1";
 	

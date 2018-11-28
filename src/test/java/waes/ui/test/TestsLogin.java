@@ -11,6 +11,13 @@ import com.aventstack.extentreports.Status;
 import waes.ui.resource.SeleniumCalls;
 import waes.ui.resource.WaesworksResources;
 
+/**
+ * The TestsLogin is a class that have all UI Steps for login scenarios.
+ * It implements the WaesworksResources and the environment for tests (ENV1) to get the data needed for the tests
+ * 
+ * @author Leonardo Santos
+ */
+
 public class TestsLogin implements WaesworksResources.ENV1{
 	
 	String stepAction;

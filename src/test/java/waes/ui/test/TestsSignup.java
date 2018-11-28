@@ -9,6 +9,13 @@ import com.aventstack.extentreports.Status;
 import waes.ui.resource.SeleniumCalls;
 import waes.ui.resource.WaesworksResources;
 
+/**
+ * The TestsSignup is a class that have all UI Steps for SignUp scenarios.
+ * It implements the WaesworksResources and the environment for tests (ENV1) to get the data needed for the tests
+ * 
+ * @author Leonardo Santos
+ */
+
 public class TestsSignup implements WaesworksResources.ENV1{
 
 	String stepAction;

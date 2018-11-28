@@ -9,6 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * The SeleniumCalls is a class that manager the abstraction of Selenium Code, it have all Selenium code and turn available the friendly methods to execute the actions on the UI tests.
+ * 
+ * @author Leonardo Santos
+ */
+
 public class SeleniumCalls {
 
 	public SeleniumCalls() {

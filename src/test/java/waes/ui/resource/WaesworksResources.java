@@ -1,7 +1,12 @@
 package waes.ui.resource;
 
-public interface WaesworksResources {
-	
+/**
+ * The WaesworksResources is a interface that manager all the input data for the UI tests, it could be easy changed for other environments just have other interface like "ENV1".
+ * 
+ * @author Leonardo Santos
+ */
+
+public interface WaesworksResources {	
 	
 	public interface ENV1{
 		
