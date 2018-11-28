@@ -1,7 +1,6 @@
 # assignment-qa-leo
-# This is a automation project results of assignment for WAES
 
-The tests of this automation covers Rest Backend and Front-End as information below
+This is a automation project results of assignment for WAES, it will cover Backend and Front-End tests as information provided by waes.
 
 
 ## Rest Backend API
@@ -37,7 +36,30 @@ The tests of this automation covers Rest Backend and Front-End as information be
   
 ### Run UI Tests  
 	gradle test --tests RunAllTests.*uiTest*
+
+### Change browser for each UI Test  (waes.ui.test.UiTests.class)
+```java
+        {  
+         WebDriver driver = new GenerateDriver().firefox();	
+         //or
+         WebDriver driver = new GenerateDriver().chrome();	
+         //or
+         WebDriver driver = new GenerateDriver().iexplorer();	  
+        }  
+```
 	
-	
-### Test Report
-assignment-qa-leo/**Waesworks - Report Tests.html**
+## Test Report
+The Report is generate each execution on Path => assignment-qa-leo/**Waesworks - Report Tests.html**
+
+The report have the following information about the test execution:
+-  Graphs for Pass/Fail test cases
+-  Graphs for Pass/Fail test steps
+-  List of test cases with Pass/Fail
+-  Each test case with list on test steps containing status Pass/Fail
+-  Time of test start, test finish and duration
+
+
+## Suggestion for Improvements
+-  Implementation JUnit 5 Parallel Test Execution;
+-  Implementation Seleium grid for escalation and setup for tests;
+-  Replicate UI creating suites for Firefox and Internet explorer (support for this browsers already implemented);
