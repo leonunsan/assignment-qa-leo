@@ -8,7 +8,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
- * The GenerateDriver is a class that manager the Selenium WebDriver, it will  create as called the instance of webdriver for the specific browser.
+ * The GenerateDriver is a class that manager the Selenium WebDriver, it will create as called the instance of webdriver for the specific browser.
  * 
  * @author Leonardo Santos
  */
