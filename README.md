@@ -3,7 +3,8 @@
 This is an automation project result of assignment for WAES, it will cover Backend and Front-End tests as information provided described on assignment and shared below.
 
 
-## Rest Backend API
+
+### Rest Backend API
  
   | Method        | Endpoint          | Description         |
   | ------------- | ---------------------------- | ------------------------ |
@@ -13,8 +14,10 @@ This is an automation project result of assignment for WAES, it will cover Backe
   | POST          | /waesheroes/api/v1/users | http endpoint to sign-up |
   | PUT           | /waesheroes/api/v1/users | http endpoint to update user information (requires Basic Auth) |
   | DELETE        | /waesheroes/api/v1/users | http endpoint to delete user (requires Basic Auth) |
+ 
+ 
   
-## Front-End
+### Front-End
 [WAESWORKS](https://waesworks.bitbucket.io/)
 
 
@@ -31,18 +34,23 @@ This is an automation project result of assignment for WAES, it will cover Backe
 ### Run All Tests
 	gradle test --tests RunAllTests  
 
+
 ### Run RestAPI Tests
 	gradle test --tests RunAllTests.*restTest*   
+  
   
 ### Run UI Tests  
 	gradle test --tests RunAllTests.*uiTest*
 	
+	
 ### Run UI Tests only on Chrome 
 	gradle test --tests RunAllTests.*uiTest*chrome*
+
 
 ### Run UI Tests only on Firefox 
 	gradle test --tests RunAllTests.*uiTest*firefox*
 
+	
 	
 ## Test Report
 The Report is generate each execution on Path => assignment-qa-leo/**Waesworks - Report Tests.html**
@@ -53,6 +61,7 @@ The report have the following information about the test execution:
 -  List of test cases with Pass/Fail
 -  Each test case with list on test steps containing status Pass/Fail
 -  Time of test start, test finish and duration
+
 
 
 ## Suggestion for Improvements
