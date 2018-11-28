@@ -96,19 +96,52 @@ public class RunAllTests {
 	}
 	
 	@Test
-	public void uiTest_validUser_asAdmin_loginOnApplication_accessToProfileDetailsListUser() {
+	public void uiTest_validUser_asAdmin_loginOnApplication_accessWelcomePage() {
 		runUiTest.validLoginAdmin();
-	}      
+	} 
+	
+	@Test
+	public void uiTest_validUser_asAdmin_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageAdmin();
+	}  
 
 	@Test
-	public void uiTest_validUser_asDev_loginOnApplication_accessToProfileDetails() {
+	public void uiTest_validUser_asAdmin_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutAdmin();
+	}  
+	
+	
+	@Test
+	public void uiTest_validUser_asDev_loginOnApplication_accessWelcomePage() {
 		runUiTest.validLoginDev();
-	}      
+	}  
+	
+	@Test
+	public void uiTest_validUser_asDev_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageDev();
+	}   
+	
+	@Test
+	public void uiTest_validUser_asDev_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutDev();
+	}   
 
+	
 	@Test
 	public void uiTest_validUser_asTester_loginOnApplication_accessToProfileDetails() {
 		runUiTest.validLoginTester();
 	}
+	
+	@Test
+	public void uiTest_validUser_asTester_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageTester();
+	}
+	
+	@Test
+	public void uiTest_validUser_asTester_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutTester();
+	}
+	
 
 	@Test
 	public void uiTest_invalidUser_asLeoleo_loginOnApplication_messageError() {

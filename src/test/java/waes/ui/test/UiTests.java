@@ -23,14 +23,49 @@ public class UiTests implements WaesworksResources.ENV1{
 		ExtentTest step = logger.createTest("Login with valid credentials for ADMIN");
 		TestsLogin runLogin = new TestsLogin();
 		
-		//It can be changed to "iexplorer", "chrome" and "firefox"
 		WebDriver driver = new GenerateDriver().firefox();	
 		
 		try {
 			runLogin.loadUrl(driver, step);			
 			runLogin.loginPage(driver, ADMIN, step);
 			runLogin.welcomePageAdmin(driver, ADMIN, step);
-			runLogin.detailsPage(driver, ADMIN, step);			
+			
+			driver.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validDetailsPageAdmin() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page");
+		TestsLogin runLogin = new TestsLogin();
+		
+		WebDriver driver = new GenerateDriver().firefox();	
+		
+		try {
+			runLogin.loadUrl(driver, step);			
+			runLogin.loginPage(driver, ADMIN, step);
+			runLogin.welcomePageAdmin(driver, ADMIN, step);
+			runLogin.detailsPage(driver, ADMIN, step);
+			driver.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validLogoutAdmin() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page");
+		TestsLogin runLogin = new TestsLogin();
+		
+		WebDriver driver = new GenerateDriver().firefox();	
+		
+		try {
+			runLogin.loadUrl(driver, step);			
+			runLogin.loginPage(driver, ADMIN, step);					
 			runLogin.logoutAction(driver, step);
 			driver.close();
 		} catch (Exception e) {
@@ -50,6 +85,45 @@ public class UiTests implements WaesworksResources.ENV1{
 			runLogin.loadUrl(driver, step);
 			runLogin.loginPage(driver, DEV, step);
 			runLogin.welcomePage(driver, DEV, step);
+			
+			driver.close();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validDetailsPageDev() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with valid credentials for DEV");
+		WebDriver driver = new GenerateDriver().chrome();
+		
+		TestsLogin runLogin = new TestsLogin();
+		
+		try {
+			runLogin.loadUrl(driver, step);
+			runLogin.loginPage(driver, DEV, step);
+			runLogin.welcomePage(driver, DEV, step);
+			runLogin.detailsPage(driver, DEV, step);
+			driver.close();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validLogoutDev() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with valid credentials for DEV");
+		WebDriver driver = new GenerateDriver().chrome();
+		
+		TestsLogin runLogin = new TestsLogin();
+		
+		try {
+			runLogin.loadUrl(driver, step);
+			runLogin.loginPage(driver, DEV, step);
 			runLogin.logoutAction(driver, step);
 			driver.close();
 		} catch (Exception e) {
@@ -59,7 +133,7 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-
+	
 	public void validLoginTester() {	
 		ExtentReports logger = ExtentManager.getInstance();
 		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
@@ -71,6 +145,42 @@ public class UiTests implements WaesworksResources.ENV1{
 			runLogin.loadUrl(driver, step);
 			runLogin.loginPage(driver, TESTER, step);
 			runLogin.welcomePage(driver, TESTER, step);
+			driver.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validDetailsPageTester() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
+		WebDriver driver = new GenerateDriver().chrome();
+		
+		TestsLogin runLogin = new TestsLogin();
+		
+		try {
+			runLogin.loadUrl(driver, step);
+			runLogin.loginPage(driver, TESTER, step);
+			runLogin.welcomePage(driver, TESTER, step);
+			runLogin.detailsPage(driver, TESTER, step);
+			driver.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			driver.close();
+		}
+	}
+	
+	public void validLogoutTester() {	
+		ExtentReports logger = ExtentManager.getInstance();
+		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
+		WebDriver driver = new GenerateDriver().chrome();
+		
+		TestsLogin runLogin = new TestsLogin();
+		
+		try {
+			runLogin.loadUrl(driver, step);
+			runLogin.loginPage(driver, TESTER, step);
 			runLogin.logoutAction(driver, step);
 			driver.close();
 		} catch (Exception e) {
