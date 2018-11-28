@@ -1,6 +1,6 @@
 # assignment-qa-leo
 
-This is a automation project results of assignment for WAES, it will cover Backend and Front-End tests as information provided by waes.
+This is an automation project result of assignment for WAES, it will cover Backend and Front-End tests as information provided described on assignment and shared below.
 
 
 ## Rest Backend API
