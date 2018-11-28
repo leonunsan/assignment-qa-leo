@@ -19,6 +19,7 @@ import waes.rest.tests.GetAllUserTest;
 import waes.rest.tests.GetInfoUserTest;
 import waes.rest.tests.SignupUserTest;
 import waes.rest.tests.UpdateUserTest;
+import waes.ui.resource.GenerateDriver;
 import waes.ui.test.UiTests;
 
 /**
@@ -96,61 +97,113 @@ public class RunAllTests {
 	}
 	
 	@Test
-	public void uiTest_validUser_asAdmin_loginOnApplication_accessWelcomePage() {
-		runUiTest.validLoginAdmin();
+	public void uiTest_chrome_validUser_asAdmin_loginOnApplication_accessWelcomePage() {
+		runUiTest.validLoginAdmin("chrome");
+	}
+	
+	@Test
+	public void uiTest_firefox_validUser_asAdmin_loginOnApplication_accessWelcomePage() {
+		runUiTest.validLoginAdmin("firefox");
+	}
+	
+	@Test
+	public void uiTest_chrome_validUser_asAdmin_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageAdmin("chrome");
 	} 
 	
 	@Test
-	public void uiTest_validUser_asAdmin_accessDetailsPage_validPageInfo() {
-		runUiTest.validDetailsPageAdmin();
-	}  
+	public void uiTest_firefox_validUser_asAdmin_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageAdmin("firefox");
+	}
 
 	@Test
-	public void uiTest_validUser_asAdmin_logoutFromApplication_successMessage() {
-		runUiTest.validLogoutAdmin();
-	}  
-	
-	
-	@Test
-	public void uiTest_validUser_asDev_loginOnApplication_accessWelcomePage() {
-		runUiTest.validLoginDev();
+	public void uiTest_chrome_validUser_asAdmin_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutAdmin("chrome");
 	}  
 	
 	@Test
-	public void uiTest_validUser_asDev_accessDetailsPage_validPageInfo() {
-		runUiTest.validDetailsPageDev();
-	}   
+	public void uiTest_firefox_validUser_asAdmin_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutAdmin("firefox");
+	} 
 	
 	@Test
-	public void uiTest_validUser_asDev_logoutFromApplication_successMessage() {
-		runUiTest.validLogoutDev();
-	}   
+	public void uiTest_chrome_validUser_asDev_loginOnApplication_accessWelcomePage() {
+		runUiTest.validLoginDev("chrome");
+	}  
+	
+	@Test
+	public void uiTest_firefox_validUser_asDev_loginOnApplication_accessWelcomePage() {
+		runUiTest.validLoginDev("firefox");
+	} 
+	
+	@Test
+	public void uiTest_chrome_validUser_asDev_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageDev("chrome");
+	} 
+	
+	@Test
+	public void uiTest_firefox_validUser_asDev_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageDev("firefox");
+	}
+	
+	@Test
+	public void uiTest_chrome_validUser_asDev_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutDev("chrome");
+	} 
+	
+	@Test
+	public void uiTest_firefox_validUser_asDev_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutDev("firefox");
+	}
+	
+	@Test
+	public void uiTest_chrome_validUser_asTester_loginOnApplication_accessToProfileDetails() {
+		runUiTest.validLoginTester("chrome");
+	}
+	
+	@Test
+	public void uiTest_firefox_validUser_asTester_loginOnApplication_accessToProfileDetails() {
+		runUiTest.validLoginTester("firefox");
+	}
+	
+	@Test
+	public void uiTest_chrome_validUser_asTester_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageTester("chrome");
+	}
+	
+	@Test
+	public void uiTest_firefox_validUser_asTester_accessDetailsPage_validPageInfo() {
+		runUiTest.validDetailsPageTester("firefox");
+	}
+	
+	@Test
+	public void uiTest_chrome_validUser_asTester_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutTester("chrome");
+	}
+	
+	@Test
+	public void uiTest_firefox_validUser_asTester_logoutFromApplication_successMessage() {
+		runUiTest.validLogoutTester("firefox");
+	}	
 
-	
 	@Test
-	public void uiTest_validUser_asTester_loginOnApplication_accessToProfileDetails() {
-		runUiTest.validLoginTester();
+	public void uiTest_chrome_invalidUser_asLeoleo_loginOnApplication_messageError() {
+		runUiTest.invalidLoginLeoleo("chrome");
 	}
 	
 	@Test
-	public void uiTest_validUser_asTester_accessDetailsPage_validPageInfo() {
-		runUiTest.validDetailsPageTester();
-	}
-	
-	@Test
-	public void uiTest_validUser_asTester_logoutFromApplication_successMessage() {
-		runUiTest.validLogoutTester();
-	}
-	
-
-	@Test
-	public void uiTest_invalidUser_asLeoleo_loginOnApplication_messageError() {
-		runUiTest.invalidLoginLeoleo();
+	public void uiTest_firefox_invalidUser_asLeoleo_loginOnApplication_messageError() {
+		runUiTest.invalidLoginLeoleo("firefox");
 	}
 
 	@Test
-	public void uiTest_validNewUserInformation_signUpOnApplication_accessToProfileDetail() {
-		runUiTest.validSignUp();
+	public void uiTest_chrome_validNewUserInformation_signUpOnApplication_accessToProfileDetail() {
+		runUiTest.validSignUp("chrome");
+	}
+	
+	@Test
+	public void uiTest_firefox_validNewUserInformation_signUpOnApplication_accessToProfileDetail() {
+		runUiTest.validSignUp("firefox");
 	}
 
 	

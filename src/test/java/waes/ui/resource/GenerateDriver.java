@@ -14,8 +14,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 
 public class GenerateDriver {	
+	
+	public WebDriver getDriver(String name) {
+		if (name == "chrome") {
+			return chrome();
+		}else if(name == "firefox") {
+			return firefox();
+		}else if(name == "iexplorer") {
+			return iexplorer() ;
+		}
+		return chrome();
+	}
 
-	public WebDriver chrome() {
+	private WebDriver chrome() {
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(); 
@@ -24,7 +35,7 @@ public class GenerateDriver {
 		return driver;
 	}  
 	
-	public WebDriver firefox() {
+	private WebDriver firefox() {
 		
 		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver(); 
@@ -33,7 +44,7 @@ public class GenerateDriver {
 		return driver;
 	} 
 	
-	public WebDriver iexplorer() {
+	private WebDriver iexplorer() {
 		
 		WebDriverManager.iedriver().setup();
 		WebDriver driver = new InternetExplorerDriver(); 

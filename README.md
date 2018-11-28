@@ -36,17 +36,13 @@ This is an automation project result of assignment for WAES, it will cover Backe
   
 ### Run UI Tests  
 	gradle test --tests RunAllTests.*uiTest*
+	
+### Run UI Tests only on Chrome 
+	gradle test --tests RunAllTests.*uiTest*chrome*
 
-### Change browser for each UI Test  (waes.ui.test.UiTests.class)
-```java
-        {  
-         WebDriver driver = new GenerateDriver().firefox();	
-         //or
-         WebDriver driver = new GenerateDriver().chrome();	
-         //or
-         WebDriver driver = new GenerateDriver().iexplorer();	  
-        }  
-```
+### Run UI Tests only on Firefox 
+	gradle test --tests RunAllTests.*uiTest*firefox*
+
 	
 ## Test Report
 The Report is generate each execution on Path => assignment-qa-leo/**Waesworks - Report Tests.html**
@@ -62,4 +58,4 @@ The report have the following information about the test execution:
 ## Suggestion for Improvements
 -  Implementation JUnit 5 Parallel Test Execution;
 -  Implementation Seleium grid for escalation and setup for tests;
--  Replicate UI creating suites for Firefox and Internet explorer (support for this browsers already implemented);
+-  Replicate UI test cases for Internet explorer;

@@ -18,12 +18,12 @@ import waes.ui.resource.WaesworksResources;
 
 public class UiTests implements WaesworksResources.ENV1{
 	
-	public void validLoginAdmin() {	
+	public void validLoginAdmin(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for ADMIN");
+		ExtentTest step = logger.createTest("Login with valid credentials for ADMIN " + browser);
 		TestsLogin runLogin = new TestsLogin();
 		
-		WebDriver driver = new GenerateDriver().firefox();	
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		try {
 			runLogin.loadUrl(driver, step);			
@@ -37,12 +37,12 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validDetailsPageAdmin() {	
+	public void validDetailsPageAdmin(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page");
+		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page " + browser);
 		TestsLogin runLogin = new TestsLogin();
 		
-		WebDriver driver = new GenerateDriver().firefox();	
+		WebDriver driver = new GenerateDriver().getDriver(browser);		
 		
 		try {
 			runLogin.loadUrl(driver, step);			
@@ -56,12 +56,12 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validLogoutAdmin() {	
+	public void validLogoutAdmin(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page");
+		ExtentTest step = logger.createTest("Login with ADMIN and check Details Page " + browser);
 		TestsLogin runLogin = new TestsLogin();
 		
-		WebDriver driver = new GenerateDriver().firefox();	
+		WebDriver driver = new GenerateDriver().getDriver(browser);		
 		
 		try {
 			runLogin.loadUrl(driver, step);			
@@ -74,10 +74,10 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validLoginDev() {	
+	public void validLoginDev(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for DEV");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for DEV " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -94,10 +94,10 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validDetailsPageDev() {	
+	public void validDetailsPageDev(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for DEV");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for DEV " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -114,10 +114,10 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validLogoutDev() {	
+	public void validLogoutDev(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for DEV");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for DEV " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -134,10 +134,10 @@ public class UiTests implements WaesworksResources.ENV1{
 	}
 	
 	
-	public void validLoginTester() {	
+	public void validLoginTester(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for TESTER " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -152,10 +152,10 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validDetailsPageTester() {	
+	public void validDetailsPageTester(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for TESTER " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -171,10 +171,10 @@ public class UiTests implements WaesworksResources.ENV1{
 		}
 	}
 	
-	public void validLogoutTester() {	
+	public void validLogoutTester(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with valid credentials for TESTER");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with valid credentials for TESTER " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -191,10 +191,10 @@ public class UiTests implements WaesworksResources.ENV1{
 	
 	
 
-	public void invalidLoginLeoleo() {	
+	public void invalidLoginLeoleo(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Login with invalid credentials for leoleo");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Login with invalid credentials for leoleo " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsLogin runLogin = new TestsLogin();
 		
@@ -212,10 +212,10 @@ public class UiTests implements WaesworksResources.ENV1{
 	
 	
 
-	public void validSignUp() {	
+	public void validSignUp(String browser) {	
 		ExtentReports logger = ExtentManager.getInstance();
-		ExtentTest step = logger.createTest("Signup with valid information");
-		WebDriver driver = new GenerateDriver().chrome();
+		ExtentTest step = logger.createTest("Signup with valid information " + browser);
+		WebDriver driver = new GenerateDriver().getDriver(browser);	
 		
 		TestsSignup runSignup = new TestsSignup();
 		
