@@ -62,6 +62,7 @@ The report have the following information about the test execution:
 -  Each test case with list on test steps containing status Pass/Fail
 -  Time of test start, test finish and duration
 
+Example Path => assignment-qa-leo/**ExampleReport.html**
 
 
 ## Suggestion for Improvements
